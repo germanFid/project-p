@@ -108,6 +108,27 @@
             ]
           }
         ]
+      },
+      {
+        "__guid": "59731d4b-b0c5-4f33-ae26-7abab05579e7",
+        "Flags": 0,
+        "Name": "PlayerUI",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ScreenPanel",
+            "__guid": "48b824b2-185f-4e8a-806b-3ee6298a130c",
+            "AutoScreenScale": true,
+            "Opacity": 1,
+            "Scale": 1,
+            "ZIndex": 100
+          },
+          {
+            "__type": "PlayerUipanel",
+            "__guid": "373dc37f-311d-4729-bf96-7a3a4483fac8",
+            "MyStringValue": "Hello, Project P!"
+          }
+        ]
       }
     ],
     "__variables": []

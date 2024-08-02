@@ -107,23 +107,6 @@
       "Enabled": true,
       "__Prefab": "debugobject.prefab",
       "__PrefabVariables": {}
-    },
-    {
-      "__guid": "d1506013-2e40-4517-a331-a83c038cd023",
-      "Flags": 0,
-      "Name": "Screen",
-      "Position": "-126.4292,-187.5311,115.5769",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ScreenPanel",
-          "__guid": "d6d54adf-f8b0-43fe-b3ad-a3be2c3e9484",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ZIndex": 100
-        }
-      ]
     }
   ],
   "SceneProperties": {
