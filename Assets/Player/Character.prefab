@@ -1,0 +1,121 @@
+{
+  "RootObject": {
+    "__guid": "8ee93e5e-d3dc-4981-9156-92c2a624df44",
+    "Flags": 0,
+    "Name": "character",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.CharacterController",
+        "__guid": "51d5e5ad-8054-4de0-99e2-afae121bd56d",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 84.62,
+        "IgnoreLayers": "",
+        "Radius": 16,
+        "StepHeight": 18,
+        "UseCollisionRules": false
+      },
+      {
+        "__type": "Fpscontroller",
+        "__guid": "ce847e39-4e57-42a2-bbe1-1a0a829e23ca",
+        "AirControl": 0.1,
+        "Body": {
+          "_type": "gameobject",
+          "go": "abdfe26c-56bd-49d1-a63f-3496dbdb3f7f"
+        },
+        "BodyRotateDifference": 50,
+        "BodyRotateModifier": 3,
+        "BodyRotateVelocity": 10,
+        "DuckSpeed": 50,
+        "GroundControl": 4,
+        "Head": {
+          "_type": "gameobject",
+          "go": "031a8248-a22e-4ba6-a75e-2931d66ad05c"
+        },
+        "JumpForce": 400,
+        "MaxForce": 50,
+        "MoveSpeed": 160,
+        "SprintSpeed": 290
+      },
+      {
+        "__type": "CameraController",
+        "__guid": "f3b3f1ec-497d-46a4-96ba-0d0cee063e11"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "abdfe26c-56bd-49d1-a63f-3496dbdb3f7f",
+        "Flags": 0,
+        "Name": "Body",
+        "Position": "0,0,31.45154",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "bb4316ea-11b6-4589-ac9d-1e5823881c2f",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "031a8248-a22e-4ba6-a75e-2931d66ad05c",
+        "Flags": 0,
+        "Name": "Head",
+        "Position": "0,0,70.90709",
+        "Scale": "0.5,0.5,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "e111c97c-8e3b-4b46-ad0a-fd3545b1bfea",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "87adb972-ccf5-440b-af37-d9c2fa208a0c",
+            "Flags": 0,
+            "Name": "Camera",
+            "Position": "0,0,0",
+            "Tags": "maincamera",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.CameraComponent",
+                "__guid": "1596eead-b1b5-435f-b99e-d98034fcc534",
+                "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                "ClearFlags": "All",
+                "FieldOfView": 90,
+                "IsMainCamera": true,
+                "Orthographic": false,
+                "OrthographicHeight": 1204,
+                "Priority": 1,
+                "RenderExcludeTags": "",
+                "RenderTags": "",
+                "TargetEye": "None",
+                "Viewport": "0,0,1,1",
+                "ZFar": 10000,
+                "ZNear": 10
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
