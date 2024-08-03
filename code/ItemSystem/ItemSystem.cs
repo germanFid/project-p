@@ -16,7 +16,7 @@ public partial class Item : GameResource
     public string Description { get; set; }
 
     [Category(ItemCategories.ItemGraphics)]
-    [ResourceType("vtex")]
+    [ImageAssetPath]
     public string Icon { get; set; }
 
     [Category(ItemCategories.ItemGraphics)]
