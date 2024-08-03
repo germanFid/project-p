@@ -47,10 +47,12 @@ QuickSwitchPanel
 	/* Item */
 	.item 
 	{
-	width: 160px;
-	height: 160px;
-	background-color: rgba(177, 178, 181, 1);
-	border-radius: 45px;
-	flex-shrink: 0;
+		width: 160px;
+		height: 160px;
+		align-items: center;
+		align-content: stretch;
+		background-color: rgba(177, 178, 181, 1);
+		border-radius: 45px;
+		flex-shrink: 0;
 	}
 }
