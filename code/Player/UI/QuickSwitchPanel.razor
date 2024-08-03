@@ -1,0 +1,23 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	@if (PlayerInventoryController.ItemCapacity == 0) return;
+	<div class="panel">
+		@for (int i = 0; i < PlayerInventoryController.ItemCapacity; i++)
+		{
+			<div class="item"></div>
+		}
+	</div>
+</root>
+
+@code
+{
+	[Property] public InventoryController PlayerInventoryController;
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	@* protected override int BuildHash() => System.HashCode.Combine( MyStringValue ); *@
+}

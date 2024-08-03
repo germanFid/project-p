@@ -107,6 +107,55 @@
       "Enabled": true,
       "__Prefab": "debugobject.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "20c88ac3-7239-4be0-991f-5acd76d2d8ae",
+      "Flags": 0,
+      "Name": "InventoryDebug",
+      "Position": "24.79021,-14.84549,70.0263",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DebugItems",
+          "__guid": "a73b403e-e782-4827-ba04-705e53a1e3de"
+        }
+      ]
+    },
+    {
+      "__guid": "7224bf67-6c93-419c-8570-82585c3d6c41",
+      "Flags": 0,
+      "Name": "Chest",
+      "Position": "193.0558,25.46435,26.42547",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "bcc0f709-cfa4-493e-b99c-e499b0160ac6",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.93953,0.24035,0.24035,1"
+        },
+        {
+          "__type": "InventoryController",
+          "__guid": "6d2ce8f3-8079-4a53-b155-cfd59404e616",
+          "Items": [
+            "items/watermelon.item"
+          ],
+          "ItemCapacity": -1
+        }
+      ]
+    },
+    {
+      "__guid": "70579868-a81d-4a5c-a608-4322ac1f5b66",
+      "Flags": 0,
+      "Name": "baseitem",
+      "Position": "134.4956,-71.26054,25.00001",
+      "Enabled": true,
+      "__Prefab": "items/prefabs/baseitem.prefab",
+      "__PrefabVariables": {
+        "Item": "items/watermelon.item"
+      }
     }
   ],
   "SceneProperties": {

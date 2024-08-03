@@ -42,6 +42,18 @@
       {
         "__type": "CameraController",
         "__guid": "f3b3f1ec-497d-46a4-96ba-0d0cee063e11"
+      },
+      {
+        "__type": "InventoryController",
+        "__guid": "36d503bf-f7cb-40aa-9d2d-b1979af09f0f",
+        "Items": [
+          "items/watermelon.item",
+          "items/watermelon.item",
+          "items/watermelon.item",
+          "items/watermelon.item",
+          "items/watermelon.item"
+        ],
+        "ItemCapacity": 5
       }
     ],
     "Children": [
@@ -50,6 +62,7 @@
         "Flags": 0,
         "Name": "Body",
         "Position": "0,0,31.45154",
+        "Scale": "0.5,1,1",
         "Enabled": true,
         "Components": [
           {
@@ -84,7 +97,7 @@
             "__guid": "87adb972-ccf5-440b-af37-d9c2fa208a0c",
             "Flags": 0,
             "Name": "Camera",
-            "Position": "0,0,0",
+            "Position": "20.53457,0,12.97058",
             "Tags": "maincamera",
             "Enabled": true,
             "Components": [
@@ -124,9 +137,14 @@
             "ZIndex": 100
           },
           {
-            "__type": "PlayerUipanel",
-            "__guid": "373dc37f-311d-4729-bf96-7a3a4483fac8",
-            "MyStringValue": "Hello, Project P!"
+            "__type": "QuickSwitchPanel",
+            "__guid": "6f6cd647-7cc0-47e9-bf65-c096707bf287",
+            "PlayerInventoryController": {
+              "_type": "component",
+              "component_id": "36d503bf-f7cb-40aa-9d2d-b1979af09f0f",
+              "go": "8ee93e5e-d3dc-4981-9156-92c2a624df44",
+              "component_type": "InventoryController"
+            }
           }
         ]
       }

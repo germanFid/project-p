@@ -1,0 +1,56 @@
+QuickSwitchPanel
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	// background-color: #444;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 2.5vh;
+
+	// font-weight: bold;
+	// border-radius: 20px;
+
+	.title
+	{
+		font-size: 25px;
+		font-family: Poppins;
+		color: #fff;
+	}
+
+	/* Panel */
+	.panel 
+	{
+		position: relative;
+		height: 200;
+		// width: 200;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 45px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		align-content: stretch;
+		justify-content: center;
+		gap: 10.81px;
+		padding: 14.41px 14.41px 14.41px 14.41px;
+		z-index: 0;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		// flex-grow: 1;
+		// min-width: 200;
+		// grid-template-rows: 1fr;
+		// grid-template-columns: 1fr;
+	}
+	  
+	/* Item */
+	.item 
+	{
+	width: 160px;
+	height: 160px;
+	background-color: rgba(177, 178, 181, 1);
+	border-radius: 45px;
+	flex-shrink: 0;
+	}
+}
