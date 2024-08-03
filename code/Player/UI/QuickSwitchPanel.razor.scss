@@ -50,9 +50,20 @@ QuickSwitchPanel
 		width: 160px;
 		height: 160px;
 		align-items: center;
-		align-content: stretch;
+		align-content: center;
+		justify-content: center;
+		// display:inline;
 		background-color: rgba(177, 178, 181, 1);
 		border-radius: 45px;
-		flex-shrink: 0;
+		// flex-shrink: 0;
+	}
+
+	.icon
+	{
+		max-width: 80%;
+		max-height: 80%;
+		// object-fit: cover;
+		// background-color: #fff;
+		// flex-shrink: 100;
 	}
 }

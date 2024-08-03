@@ -1,5 +1,7 @@
 @using Sandbox;
 @using Sandbox.UI;
+
+@using ProjectP.ItemSystem;
 @inherits PanelComponent
 
 <root>
@@ -8,13 +10,11 @@
 		@for (int i = 0; i < PlayerInventoryController.ItemCapacity; i++)
 		{
 			<div class="item">
-				@if (i < PlayerInventoryController.Items.Count && 
-				PlayerInventoryController.Items[i] != null)
+				@if (i < PlayerInventoryController.Items.Count && PlayerInventoryController.Items[i] != null)
 				{
 					Log.Info("Updated Item!");
-					<div>
-						@PlayerInventoryController.Items[i].Name
-					</div>
+					<img src=@PlayerInventoryController.Items[i].Icon class="icon">
+					</img>
 				}
 			</div>
 		}
