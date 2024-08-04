@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using ProjectP.ItemSystem;
 using Sandbox;
@@ -10,6 +11,7 @@ public sealed class InventoryController : Component
 	/// </summary>
 	[Property] public int ItemCapacity { get; set; }
 	[Property] public List<Item> Items;
+	[Property] public GameObject BaseItem { get; set; }
 
 	/// <summary>
 	/// If inventory is occupied by player or other object
@@ -52,6 +54,22 @@ public sealed class InventoryController : Component
 		return removed_item;
 	}
 
+	private Item DropItem(Item item)
+	{
+		var droppedItem = RemoveItem(item);
+
+		if (droppedItem is not null)
+		{
+			GameObject dropped = BaseItem.Clone(GameObject.Transform.Position);
+			var itemController = dropped.Components.Get<ItemController>();
+
+			itemController.ItemDefenition = item;
+			itemController.UpdateModel();
+		}
+
+		return droppedItem;
+	}
+
 	private void DebugOutput()
 	{
 		var s = "";
@@ -67,16 +85,20 @@ public sealed class InventoryController : Component
 	{
 		Items ??= new List<Item>();
 
+		// if (BaseItem is null)
+		// {
+		// 	GameObject baseItemTemp = new GameObject();
+		// 	baseItemTemp.SetPrefabSource("/items/prefabs/baseitem.prefab");
+		// 	BaseItem = baseItemTemp;
+		// }
+
 		base.OnAwake();
 	}
 
 	protected override void OnStart()
 	{
-		// for (int i = 0; i < 30; i++)
-		// {
-		// 	AddItem(Items[0]);
-		// }
 		DebugOutput();
+		DropItem(Items[0]);
 		base.OnStart();
 	}
 }
