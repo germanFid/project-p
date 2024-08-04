@@ -31,6 +31,7 @@ public sealed class Fpscontroller : Component
 		WishVelocity = 0.0f;
 
 		var direction = Head.Transform.Rotation;
+		direction.x = 0;
 		if (Input.Down("Forward")) WishVelocity += direction.Forward;
 		if (Input.Down("Backward")) WishVelocity += direction.Backward;
 		if (Input.Down("Left")) WishVelocity += direction.Left;
