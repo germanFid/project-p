@@ -1,0 +1,8 @@
+{
+  "Name": "Watermelon",
+  "Description": "watermelon is a berry",
+  "Icon": "images/watermelon.png",
+  "Model": "models/watermelon/watermelon.vmdl",
+  "__references": [],
+  "__version": 0
+}
