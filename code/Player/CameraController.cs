@@ -2,9 +2,6 @@ using Sandbox;
 
 public sealed class CameraController : Component
 {
-	// [Property] public GameObject Body { get; set; }
-    // [Property] public GameObject Head { get; set; }
-
 	private Fpscontroller fpscontroller;
 	private CameraController camera;
 	private GameObject body, head;
