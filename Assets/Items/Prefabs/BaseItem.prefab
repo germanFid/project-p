@@ -59,6 +59,10 @@
           {
             "Id": "2f402fd4-03f3-4742-873f-02f128e54d05",
             "Property": "ItemDefenition"
+          },
+          {
+            "Id": "2f402fd4-03f3-4742-873f-02f128e54d05",
+            "Property": "_itemDefenition"
           }
         ]
       }

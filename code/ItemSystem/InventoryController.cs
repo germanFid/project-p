@@ -77,7 +77,6 @@ public sealed class InventoryController : Component
 			var itemController = dropped.Components.Get<ItemController>();
 
 			itemController.ItemDefenition = item;
-			itemController.UpdateModel();
 		}
 
 		return droppedItem;
