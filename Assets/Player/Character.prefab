@@ -47,7 +47,7 @@
       {
         "__type": "InventoryController",
         "__guid": "36d503bf-f7cb-40aa-9d2d-b1979af09f0f",
-        "Items": [
+        "_items": [
           "items/watermelon.item",
           "items/watermelon.item"
         ],

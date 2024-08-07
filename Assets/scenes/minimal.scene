@@ -1,5 +1,5 @@
 {
-  "__guid": "1e1f6321-3cf2-4fb0-9490-0858a8fdf9a1",
+  "__guid": "26170f98-05a2-49aa-b116-909473dd199d",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -140,7 +140,9 @@
         {
           "__type": "InventoryController",
           "__guid": "6d2ce8f3-8079-4a53-b155-cfd59404e616",
-          "Items": [
+          "_items": [
+            "items/watermelon.item",
+            "items/watermelon.item",
             "items/watermelon.item"
           ],
           "BaseItem": {

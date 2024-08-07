@@ -10,10 +10,10 @@
 		@for (int i = 0; i < PlayerInventoryController.ItemCapacity; i++)
 		{
 			<div class="item">
-				@if (i < PlayerInventoryController.Items.Count && PlayerInventoryController.Items[i] != null)
+				@if (i < PlayerInventoryController.ItemsCount && PlayerInventoryController.GetItem(i) != null)
 				{
 					Log.Info("Updated Item!");
-					<img src=@PlayerInventoryController.Items[i].Icon class="icon">
+					<img src=@PlayerInventoryController.GetItem(i).Icon class="icon">
 				}
 			</div>
 		}
@@ -27,5 +27,5 @@
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine( PlayerInventoryController.Items.Count );
+	protected override int BuildHash() => System.HashCode.Combine( PlayerInventoryController.ItemsCount );
 }
