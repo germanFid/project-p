@@ -1,7 +1,4 @@
-using System;
-using System.Threading;
 using ProjectP.ItemSystem;
-using Sandbox;
 
 public sealed class InventoryController : Component
 {
@@ -90,7 +87,7 @@ public sealed class InventoryController : Component
 			s += item.Name + " ";
 		}
 
-		Log.Info($"Inventory contains {_items.Count} items: {s}");
+		Log.Info($"Inventory of {GameObject.Name} contains {_items.Count} items: {s}");
 	}
 
 	protected override void OnAwake()
@@ -110,7 +107,6 @@ public sealed class InventoryController : Component
 	protected override void OnStart()
 	{
 		DebugOutput();
-		DropItem(_items[0]);
 		base.OnStart();
 	}
 }
