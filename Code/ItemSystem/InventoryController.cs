@@ -1,7 +1,6 @@
 using System;
 using System.Threading;
 using ProjectP.ItemSystem;
-using Sandbox;
 
 public sealed class InventoryController : Component
 {
@@ -110,7 +109,6 @@ public sealed class InventoryController : Component
 	protected override void OnStart()
 	{
 		DebugOutput();
-		DropItem(_items[0]);
 		base.OnStart();
 	}
 }
