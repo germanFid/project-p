@@ -1,0 +1,77 @@
+{
+  "RootObject": {
+    "__guid": "cf2f3722-459f-4d8f-b902-69f66f22716b",
+    "Flags": 0,
+    "Name": "baseitem",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ItemController",
+        "__guid": "2f402fd4-03f3-4742-873f-02f128e54d05",
+        "ModelObject": {
+          "_type": "gameobject",
+          "go": "2a774290-e4c3-4f0c-8326-0dd0b3a4a2e9"
+        }
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "2a774290-e4c3-4f0c-8326-0dd0b3a4a2e9",
+        "Flags": 0,
+        "Name": "Cube",
+        "Tags": "item",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "5f6a6745-e469-49cd-99f2-4d18a86a5ab0",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_props/trashbag02.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "a3788deb-30af-456b-9dbe-6e989612fc41",
+            "IsTrigger": false,
+            "Static": false
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "d8561b8f-2a0c-4d73-b755-e5974ce7664b",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "MotionEnabled": true,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          }
+        ]
+      }
+    ],
+    "__variables": [
+      {
+        "Id": "Item",
+        "Title": "Item",
+        "Targets": [
+          {
+            "Id": "2f402fd4-03f3-4742-873f-02f128e54d05",
+            "Property": "ItemDefenition"
+          },
+          {
+            "Id": "2f402fd4-03f3-4742-873f-02f128e54d05",
+            "Property": "_itemDefenition"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

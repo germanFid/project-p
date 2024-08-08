@@ -3,6 +3,7 @@
     "__guid": "8ee93e5e-d3dc-4981-9156-92c2a624df44",
     "Flags": 0,
     "Name": "character",
+    "Tags": "player",
     "Enabled": true,
     "Components": [
       {
@@ -12,7 +13,7 @@
         "Bounciness": 0.3,
         "GroundAngle": 45,
         "Height": 84.62,
-        "IgnoreLayers": "",
+        "IgnoreLayers": "item",
         "Radius": 16,
         "StepHeight": 18,
         "UseCollisionRules": false
@@ -46,13 +47,14 @@
       {
         "__type": "InventoryController",
         "__guid": "36d503bf-f7cb-40aa-9d2d-b1979af09f0f",
-        "Items": [
-          "items/watermelon.item",
-          "items/watermelon.item",
-          "items/watermelon.item",
+        "_items": [
           "items/watermelon.item",
           "items/watermelon.item"
         ],
+        "BaseItem": {
+          "_type": "gameobject",
+          "prefab": "items/prefabs/baseitem.prefab"
+        },
         "ItemCapacity": 5
       }
     ],

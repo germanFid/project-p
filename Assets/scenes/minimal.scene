@@ -1,5 +1,5 @@
 {
-  "__guid": "1e1f6321-3cf2-4fb0-9490-0858a8fdf9a1",
+  "__guid": "26170f98-05a2-49aa-b116-909473dd199d",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -86,6 +86,7 @@
       "Flags": 0,
       "Name": "Character",
       "Position": "0,0,2.452362",
+      "Tags": "player",
       "Enabled": true,
       "__Prefab": "player/character.prefab",
       "__PrefabVariables": {}
@@ -139,10 +140,24 @@
         {
           "__type": "InventoryController",
           "__guid": "6d2ce8f3-8079-4a53-b155-cfd59404e616",
-          "Items": [
+          "_items": [
+            "items/watermelon.item",
+            "items/watermelon.item",
             "items/watermelon.item"
           ],
+          "BaseItem": {
+            "_type": "gameobject",
+            "prefab": "items/prefabs/baseitem.prefab"
+          },
           "ItemCapacity": -1
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "1bed7e35-72e2-4021-ba07-8521250ff8de",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
     },
@@ -150,7 +165,7 @@
       "__guid": "70579868-a81d-4a5c-a608-4322ac1f5b66",
       "Flags": 0,
       "Name": "baseitem",
-      "Position": "134.4956,-71.26054,25.00001",
+      "Position": "123.3954,-42.97592,33.39825",
       "Enabled": true,
       "__Prefab": "items/prefabs/baseitem.prefab",
       "__PrefabVariables": {

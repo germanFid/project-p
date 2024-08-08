@@ -3,25 +3,25 @@ using Sandbox.Citizen;
 
 public sealed class Fpscontroller : Component
 {
-	[Property] public float GroundControl { get; set; } = 4.0f;
-	[Property] public float AirControl { get; set; } = 0.1f;
-	[Property] public float MaxForce { get; set; } = 50f;
-	[Property] public float JumpForce { get; set; } = 400f;
+	[Property] private float GroundControl { get; set; } = 4.0f;
+	[Property] private float AirControl { get; set; } = 0.1f;
+	[Property] private float MaxForce { get; set; } = 50f;
+	[Property] private float JumpForce { get; set; } = 400f;
 
-	[Property] public float MoveSpeed { get; set; } = 160f;
-	[Property] public float DuckSpeed { get; set; } = 50f;
-	[Property] public float SprintSpeed { get; set; } = 290f;
+	[Property] private float MoveSpeed { get; set; } = 160f;
+	[Property] private float DuckSpeed { get; set; } = 50f;
+	[Property] private float SprintSpeed { get; set; } = 290f;
 
-	[Property] public GameObject Head { get; set; }
-    [Property] public GameObject Body { get; set; }
+	[Property] public GameObject Head { get; private set; }
+    [Property] public GameObject Body { get; private set; }
 
 	// Maximum difference between body and head to rotate body
-	[Property] float BodyRotateDifference { get; set; } = 50f;
-	[Property] float BodyRotateVelocity { get; set; } = 10f;
-	[Property] float BodyRotateModifier{ get; set; } = 3f;
+	[Property] private float BodyRotateDifference { get; set; } = 50f;
+	[Property] private float BodyRotateVelocity { get; set; } = 10f;
+	[Property] private float BodyRotateModifier{ get; set; } = 3f;
 
-	public bool IsDucking = false;
-    public bool IsSprinting = false;
+	private bool IsDucking = false;
+    private bool IsSprinting = false;
 	private CharacterController characterController;
 
 	private Vector3 WishVelocity;

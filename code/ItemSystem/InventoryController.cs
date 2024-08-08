@@ -1,7 +1,4 @@
-using System;
-using System.Threading;
 using ProjectP.ItemSystem;
-using Sandbox;
 
 public sealed class InventoryController : Component
 {
@@ -9,52 +6,65 @@ public sealed class InventoryController : Component
 	/// Shows capacity of the inventory. 
 	/// If negative, then inventory has infinite capacity.
 	/// </summary>
-	[Property] public int ItemCapacity { get; set; }
-	[Property] public List<Item> Items;
-	[Property] public GameObject BaseItem { get; set; }
+	[Property] public int ItemCapacity { get; private set; }
+	[Property] private List<Item> _items;
+	[Property] private GameObject BaseItem { get; set; }
+
+	public int ItemsCount 
+	{ 
+		get 
+		{
+			return _items.Count;
+		}
+	}
 
 	/// <summary>
 	/// If inventory is occupied by player or other object
 	/// </summary>
-	public bool InventoryOccupied { get; }
+	public bool InventoryOccupied { get; private set; }
 
-	private Item AddItem(Item item)
+	public Item GetItem(int index)
 	{
-		if (Items.Count + 1 <= ItemCapacity || ItemCapacity < 0)
+		return _items[index];
+	}
+
+	public Item AddItem(Item item)
+	{
+		if (_items.Count + 1 <= ItemCapacity || ItemCapacity < 0)
 		{
-			if (item is not null) Items.Add(item);
+			if (item is not null) _items.Add(item);
 			return item;
 		}
 
 		else return null;
 	}
 
-	private Item RemoveItem(int index)
+	public Item RemoveItem(int index)
 	{
 		Item removed_item = null;
-		if (Items.Count > index)
+		if (_items.Count > index)
 		{
-			removed_item = Items[index];
-			Items.RemoveAt(index);
+			removed_item = _items[index];
+			_items.RemoveAt(index);
 		}
 
 		return removed_item;
 	}
 
-	private Item RemoveItem(Item item)
+	public Item RemoveItem(Item item)
 	{
 		Item removed_item = null;
 
-		if (Items.Contains(item))
+		if (_items.Contains(item))
 		{
 			removed_item = item;
-			Items.Remove(item);
+			_items.Remove(item);
 		}
 
 		return removed_item;
 	}
 
-	private Item DropItem(Item item)
+	public Item DropItem(Item item)
 	{
 		var droppedItem = RemoveItem(item);
 
@@ -64,7 +74,6 @@ public sealed class InventoryController : Component
 			var itemController = dropped.Components.Get<ItemController>();
 
 			itemController.ItemDefenition = item;
-			itemController.UpdateModel();
 		}
 
 		return droppedItem;
@@ -73,17 +82,17 @@ public sealed class InventoryController : Component
 	private void DebugOutput()
 	{
 		var s = "";
-		foreach (var item in Items)
+		foreach (var item in _items)
 		{
 			s += item.Name + " ";
 		}
 
-		Log.Info($"Inventory contains {Items.Count} items: {s}");
+		Log.Info($"Inventory of {GameObject.Name} contains {_items.Count} items: {s}");
 	}
 
 	protected override void OnAwake()
 	{
-		Items ??= new List<Item>();
+		_items ??= new List<Item>();
 
 		// if (BaseItem is null)
 		// {
@@ -98,7 +107,6 @@ public sealed class InventoryController : Component
 	protected override void OnStart()
 	{
 		DebugOutput();
-		DropItem(Items[0]);
 		base.OnStart();
 	}
 }
